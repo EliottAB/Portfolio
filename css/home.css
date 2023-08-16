@@ -1,0 +1,93 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    margin: auto;
+}
+
+#presentation{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70em;
+    height: 100svh;
+    opacity: 0;
+    animation: appear-from-bottom 1.5s forwards .5s;
+}
+
+#presentation img{
+    position: absolute;
+    right: 0;
+    margin-bottom: -8em;
+    width: 30em;
+    opacity: .3;
+}
+
+.before-name{
+    margin-bottom: 1em;
+    color: rgb(50, 250, 220);
+}
+
+#presentation h1{
+    font-size: 4em;
+    color: white;
+}
+
+#presentation h2{
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    color: white;
+    opacity: .5;
+}
+
+.self-preview{
+    color: white;
+    opacity: .5;
+}
+
+.arrow-next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 8em;
+    width: 2.2em;
+    height: 2.2em;
+    margin: 0 auto;
+    border: white .2em solid;
+    border-radius: 100vw;
+    opacity: .5;
+    transition: border-color .2s, opacity .2s, transform .2s;
+}
+
+.arrow-next svg{
+    width: 1.5em;
+    height: 1.5em;
+    fill: white;
+    transform: rotate(180deg);
+    transition: fill .2s;
+}
+
+.arrow-next:hover{
+    border-color: rgb(50, 250, 220);
+    opacity: 1;
+    transform: scale(120%)
+}
+
+.arrow-next:hover svg{
+    fill: rgb(50, 250, 220);
+}
+
+@keyframes appear-from-bottom {
+    from{
+        transform: translateY(10em);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
