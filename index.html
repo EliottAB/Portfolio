@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eliott Abadie is a Front-End Developper by passion. Check out my portfolio !">
-    <title>Eliott Abadie</title>
+    <meta name="description" content="Eliott Abadie is a Front-End Developer by passion. Check out my portfolio !">
+    <title>Eliott Abadie Front-End React Developer</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -27,20 +27,147 @@
         <div id="presentation">
             <p class="before-name">Hello, my name is</p>
             <h1>Eliott Abadie</h1>
-            <h2>I am a Front-End Developper</h2>
+            <h2>I am a Front-End Developer</h2>
             <p class="self-preview">
                 Passionate about coding, I started in the world of Front-End development.<br/>I love creating intuitive and optimized websites.<br/>Each project is a way for me to gain skills and learn more.
             </p>
             <a href="#about-me" class="arrow-next">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
             </a>
-            <img src="./assets/PhotoCVcut.png" alt="Eliott Abadie">
+            <img src="./assets/PhotoCVcut.png" alt="Eliott Abadie" draggable="false">
         </div>
+
         <section id="about-me">
-            <h2>About me</h2>
+            <h2 class="section-title">About me</h2>
+            
+            <div class="keyboard-line">
+                <div class="keyboard-key"><p>A</p></div>
+
+                <article class="road">
+                    <h3>The Road</h3>
+                    <p>My first steps in the world of coding were at school, we used "scratch2" to create drawings, games and solve math problems.
+                        <br/>Later, we used python to do maths.
+                        <br/>I really enjoyed coding like this! So I started studying web development and fell in love with it.
+                        <br/>A few month later I started a Front-End Developer formation from "OpenClassroom" and successfully completed it in 2022 !
+                    </p>
+                </article>
+
+                <div class="keyboard-key"><p>E</p></div>
+                
+                <article class="stack">
+                    <h3>My stack</h3>
+                    <ul>
+                        <li><span>HTML</span><img src="./assets/html.png" alt="HTML"></li>
+                        <li><span>CSS</span><img src="./assets/css.png" alt="CSS"></li>
+                        <li><span>JavaScript</span><img src="./assets/javascript.png" alt="JavaScript"></li>
+                        <li><span>TypeScript</span><img src="./assets/typescript.png" alt="TypeScript"></li>
+                        <li><span>ReactJS</span><img src="./assets/react.png" alt="ReactJS"></li>
+                        <li class="nextJS"><span>NextJS</span><img src="./assets/next.png" alt="NextJS"></li>
+                        <li><span>Redux</span><img src="./assets/redux.png" alt="Redux"></li>
+                        <li><span>FireBase</span><img src="./assets/firebase.png" alt="FireBase"></li>
+                    </ul>
+                </article>
+
+                <div class="keyboard-key"><p>T</p></div>
+            </div>
+
+            <div class="keyboard-line">
+                <div class="keyboard-key"><p>Q</p></div>
+                <div class="keyboard-key"><p>S</p></div>
+
+                <article class="facts">
+                    <h3>Random facts</h3>
+                    <div>
+                        <ul>
+                            <li>I did theater for 3 years</li>
+                            <li>I love sports like biking, swimming and gym</li>
+                            <li>I listen to Lof-fi most often, but my musical tastes are varied, from classical to metal</li>
+                            <li>I hate anything like tik tok or instagram reels</li>
+                            <li>My favorite food is mango</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <div class="keyboard-key"><p>F</p></div>
+                <div class="keyboard-key"><p>G</p></div>
+            </div>
         </section>
-        <section id="projects"></section>
-        <section id="contact"></section>
+
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-container">
+                <article>
+                    <div class="project-img-container">
+                        <div class="shadow-back"></div>
+                        <img src="./assets/todos.jpg" alt="Todos website">
+                        <a target="_blank" href="https://todo-d7554.web.app">Link <img src="./assets/web.png" alt="Web icon"></a>
+                        <a target="_blank" href="https://github.com/EliottAB/ToDos.git">GitHub <img src="./assets/github.png" alt="GitHub icon"/></a>
+                    </div>
+                    <h3 class="project-name">T⊙D⊙s</h3>
+                    <p class="project-description">Yes, this is one of the most basics for a developer.<br/>I created it for practice and decided to use <span>TypeScript</span>, <span>FireBase</span> to create and communicate with a database + authenticate users, and <span>Next.js</span> which was not that useful because of the interactivity of the app, but i learned a lot.</p>
+                </article>
+
+                <article>
+                    <div class="project-img-container">
+                        <div class="shadow-back"></div>
+                        <img src="./assets/RPC.jpg" alt="Rock Paper Scissors website">
+                        <a target="_blank" href="https://eliottab.github.io/rock-paper-scisors">Link <img src="./assets/web.png" alt="Web icon"></a>
+                        <a target="_blank" href="https://github.com/EliottAB/rock-paper-scisors.git">GitHub <img src="./assets/github.png" alt="GitHub icon"/></a>
+                    </div>
+                    <h3 class="project-name">Rock Paper Scissors</h3>
+                    <p class="project-description">This project from 'Front-End Mentor' is a basic Rock Paper Scissors, but with great animations with <span>JavaScript</span>.<br/>I really like this type of project because with pre-made designs (not animations ones) i can fully focus on the code, without being stopped by thinking about the design.</p>
+                </article>
+
+                <article>
+                    <div class="project-img-container">
+                        <div class="shadow-back"></div>
+                        <img src="./assets/witw.jpg" alt="Where in the world website">
+                        <a target="_blank" href="https://eliottab.github.io/CountriesAPI_FrontEndMentor">Link <img src="./assets/web.png" alt="Web icon"></a>
+                        <a target="_blank" href="https://github.com/EliottAB/CountriesAPI_FrontEndMentor.git">GitHub <img src="./assets/github.png" alt="GitHub icon"/></a>
+                    </div>
+                    <h3 class="project-name">Where in the world</h3>
+                    <p class="project-description">Another project from 'Front-end mentor', this one take some countries datas and display them.<br/>Search in the countries, filter them and see the country page are the main features.<br/>I used <span>JavaScript</span> to create it, but i think i should have used React instead for the component based development</p>
+                </article>
+
+                <article>
+                    <div class="project-img-container">
+                        <div class="shadow-back"></div>
+                        <img src="./assets/kasa.jpg" alt="Kasa website">
+                        <a target="_blank" href="https://eliottab.github.io/-EliottAbadie_11_24052022">Link <img src="./assets/web.png" alt="Web icon"></a>
+                        <a target="_blank" href="https://github.com/EliottAB/-EliottAbadie_11_24052022.git">GitHub <img src="./assets/github.png" alt="GitHub icon"/></a>
+                    </div>
+                    <h3 class="project-name">Kasa</h3>
+                    <p class="project-description">From my Front-End dev formation, this one made with <span>ReactJS</span> is my first project using React.</p>
+                </article>
+
+                <article>
+                    <div class="project-img-container">
+                        <div class="shadow-back"></div>
+                        <img src="./assets/petitsplats.jpg" alt="Les petits plats website">
+                        <a target="_blank" href="https://eliottab.github.io/EliottAbadie_7_29012022">Link <img src="./assets/web.png" alt="Web icon"></a>
+                        <a target="_blank" href="https://github.com/EliottAB/EliottAbadie_7_29012022.git">GitHub <img src="./assets/github.png" alt="GitHub icon"/></a>
+                    </div>
+                    <h3 class="project-name">Les Petits Plats</h3>
+                    <p class="project-description">Another project from my formation, this one is a list of recipes, in which we can search a recipe, and select an ingredient, utensils or appliances.<br/>Made with <span>JavaScript</span></p>
+                </article>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-links">
+                <a target="_blank" href="https://github.com/EliottAB"><img src="./assets/github.png" alt="GitHub icon">GitHub</a>
+                <a href="mailto:eliott.abadie4@gmail.com">Send me an Email</a>
+                <a href="./assets/eliott_abadie_resume.pdf" download>Download my resume</a>
+            </div>
+
+            <div class="copyright">
+                <p>© Copyright 2023. Made by Eliott Abadie</p>
+            </div>
+        </footer>
     </main>
+
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>

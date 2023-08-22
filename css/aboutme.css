@@ -1,0 +1,158 @@
+#about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 2em;
+    padding: 5em 0;
+    gap: 3em;
+}
+
+.keyboard-line{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+#about-me article, .keyboard-key{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25em;
+    height: fit-content;
+    padding: 4em;
+    border-radius: 1.4em;
+    color: white;
+    background-color: rgb(40, 50, 80);
+    animation-timing-function: ease;
+    transform: scale(90%);
+}
+
+#about-me article h3{
+    font-size: 1.6em;
+    margin: 0 auto 1.2em;
+}
+
+.stack{
+    display: flex;
+    justify-content: center;
+}
+
+.stack h4{
+    text-align: center;
+}
+
+.stack ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em 2em;
+}
+
+.stack li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.stack li span{
+    text-align: center;
+    font-weight: 700;
+}
+
+.stack img{
+    width: 4em;
+}
+
+.nextJS::before{
+    content: "";
+    position: absolute;
+    top: 1.3em;
+    height: 72%;
+    width: 86%;
+    border-radius: 100vw;
+    background-color: white;
+    z-index: -1;
+}
+
+.facts>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facts ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.facts li{
+    display: flex;
+    align-items: center;
+}
+
+.facts li::before { 
+    content: "";
+    position: relative;
+    left: -1em;
+    border-color: transparent rgb(50, 250, 220);
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+}
+
+.keyboard-key{
+    width: 17em;
+    height: 16em;
+}
+
+.keyboard-key p{
+    font-size: 8em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1580px) {
+    .keyboard-key:nth-child(3){
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .keyboard-line{
+        flex-direction: column;
+    }
+
+    .keyboard-key{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #about-me article{
+        font-size: 1.2em;
+    }
+
+    #about-me article p, .facts li{
+        font-size: 1.4em;
+    }
+}
+
+@keyframes show-article {
+    from{
+        box-shadow: none;
+        padding: 4em;
+        transform: scale(90%);
+    }
+
+    to{
+        box-shadow: rgba(0, 0, 0, 0.57) 0 -1.43em 1.56em 0 inset, rgba(0, 0, 0, 0.55) 0 -2.25em 1.87em 0 inset, rgba(0, 0, 0, 0.1) 0 -4.93em 2.5em 0 inset, rgba(0, 0, 0, 0.06) 0 0.12em 0.06em, rgba(0, 0, 0, 0.09) 0 0.25em 0.12em, rgba(0, 0, 0, 0.09) 0 0.5em 0.25em, rgba(0, 0, 0, 0.09) 0 1em 0.5em, rgba(0, 0, 0, 0.09) 0 2em 1em;
+        padding: 3em 4em 5em;
+        transform: scale(100%);
+    }
+    
+}

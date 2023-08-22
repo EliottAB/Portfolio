@@ -1,11 +1,13 @@
 header{
     position: fixed;
+    top: 0;
     width: calc(100vw - 6em);
     height: 5em;
     padding: 0 3em;
     background-color: rgb(20, 30, 50);
     box-shadow: 0 0 1em black;
     z-index: 2;
+    transition: top .4s;
 }
 
 nav{
@@ -14,12 +16,12 @@ nav{
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-    gap: 3em;
+    gap: 2vw;
 }
 
 nav::before, nav::after{
     content: "";
-    width: 5em;
+    width: 5vw;
     height: .1em;
     opacity: 0;
     background-color: rgb(44, 47, 69);
@@ -98,6 +100,20 @@ nav a:hover::before{
 
 .logo img{
     width: 1.5em;
+}
+
+@media screen and (max-width: 720px) {
+    header{
+        font-size: 1.8em;
+    }
+
+    nav{
+        justify-content: space-between;
+    }
+
+    .logo{
+        display: none;
+    }
 }
 
 

@@ -2,8 +2,6 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70vw;
-    margin: auto;
 }
 
 #presentation{
@@ -12,7 +10,10 @@ main{
     flex-direction: column;
     justify-content: center;
     width: 70em;
+    max-width: calc(100vw - 8em);
     height: 100svh;
+    min-height: 40em;
+    padding: 0;
     opacity: 0;
     animation: appear-from-bottom 1.5s forwards .5s;
 }
@@ -21,8 +22,9 @@ main{
     position: absolute;
     right: 0;
     margin-bottom: -8em;
-    width: 30em;
+    width: 25em;
     opacity: .3;
+    z-index: -1;
 }
 
 .before-name{
@@ -38,13 +40,11 @@ main{
 #presentation h2{
     margin-bottom: 1em;
     font-size: 2.5em;
-    color: white;
-    opacity: .5;
+    color: rgb(120, 130, 150);
 }
 
 .self-preview{
-    color: white;
-    opacity: .5;
+    color: rgb(120, 130, 150);
 }
 
 .arrow-next{
@@ -52,7 +52,7 @@ main{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 8em;
+    top: 6em;
     width: 2.2em;
     height: 2.2em;
     margin: 0 auto;
@@ -78,6 +78,57 @@ main{
 
 .arrow-next:hover svg{
     fill: rgb(50, 250, 220);
+}
+
+.section-title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.section-title::before, .section-title::after{
+    content: "";
+    position: relative;
+    width: 20vw;
+    height: .15em;
+    opacity: .3;
+    border-radius: 100vw;
+    background-color: white;
+}
+
+.section-title::before{
+    right: 1em;
+}
+
+.section-title::after{
+    left: 1em;
+}
+
+@media screen and (max-width: 720px) {
+    #presentation{
+        font-size: 1.5em;
+        min-height: 60em;
+    }
+
+    #presentation p{
+        font-size: 1.4em;
+    }
+
+    #presentation img{
+        transform: translateY(-2em);
+        left: 5em;
+    }
+
+    .arrow-next{
+        font-size: 1.4em;
+        top: 2em;
+    }
 }
 
 @keyframes appear-from-bottom {
