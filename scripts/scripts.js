@@ -5,6 +5,7 @@ var keyboardKeys = document.querySelectorAll(".keyboard-key, .keyboard-line arti
 var projectSection = document.querySelector("#projects");
 var projects = document.querySelectorAll("#projects article");
 var previousScrollY = 0;
+//this code remove or show the header when user scroll
 window.addEventListener("scroll", function () {
     if (window.scrollY > previousScrollY) {
         header === null || header === void 0 ? void 0 : header.setAttribute("style", "top: -6em");
@@ -39,6 +40,7 @@ var projectsObserver = new IntersectionObserver(function (entries) {
 });
 aboutMe && aboutMeObserver.observe(aboutMe);
 projectSection && projectsObserver.observe(projectSection);
+//this function makes the projects cards move depending on the mouse position on it
 function moveCard(project, pageX, pageY, disablescroll) {
     if (disablescroll === void 0) { disablescroll = false; }
     if (disablescroll) {

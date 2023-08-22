@@ -5,6 +5,7 @@ const projectSection: HTMLElement | null = document.querySelector("#projects")
 const projects: NodeListOf<HTMLElement> | null = document.querySelectorAll("#projects article")
 let previousScrollY:number = 0
 
+//this code remove or show the header when user scroll
 window.addEventListener("scroll", () => {
     if (window.scrollY > previousScrollY) {
         header?.setAttribute("style", "top: -6em")
@@ -42,14 +43,13 @@ const projectsObserver = new IntersectionObserver(entries => {
 aboutMe && aboutMeObserver.observe(aboutMe)
 projectSection && projectsObserver.observe(projectSection)
 
+//this function makes the projects cards move depending on the mouse position on it
 function moveCard(project: HTMLElement, pageX: number, pageY: number, disablescroll: boolean =false){
-
     if (disablescroll) {
         let  scrollTop = window.scrollY || document.documentElement.scrollTop
         let scrollLeft = window.scrollX || document.documentElement.scrollLeft
         window.onscroll = () => {window.scrollTo(scrollLeft, scrollTop)}
     }
-
     const mousePositionX = pageX - project.offsetLeft;
     const mousePositionY = pageY - project.offsetTop;
     const mousePositionXFromCenter = -(project.clientWidth - mousePositionX*2)
