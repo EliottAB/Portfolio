@@ -45,11 +45,6 @@ projectSection && projectsObserver.observe(projectSection)
 
 //this function makes the projects cards move depending on the mouse position on it
 function moveCard(project: HTMLElement, pageX: number, pageY: number, disablescroll: boolean =false){
-    if (disablescroll) {
-        let  scrollTop = window.scrollY || document.documentElement.scrollTop
-        let scrollLeft = window.scrollX || document.documentElement.scrollLeft
-        window.onscroll = () => {window.scrollTo(scrollLeft, scrollTop)}
-    }
     const mousePositionX = pageX - project.offsetLeft;
     const mousePositionY = pageY - project.offsetTop;
     const mousePositionXFromCenter = -(project.clientWidth - mousePositionX*2)
@@ -66,11 +61,9 @@ function unMoveCard(project: HTMLElement){
 
 projects.forEach(project => {
     project.addEventListener("mousemove", e => {
-        moveCard(project, e.pageX, e.pageY)
-    })
-    project.addEventListener("touchmove", e => {
-        let noscroll = window.innerWidth<720 ? false : true
-        moveCard(project, e.touches[0].pageX, e.touches[0].pageY, noscroll)
+        if (e.buttons === 0) {
+            moveCard(project, e.pageX, e.pageY)
+        }
     })
 })
 
@@ -78,10 +71,7 @@ projects.forEach(project => {
     project.addEventListener("mouseleave", () => {
         unMoveCard(project)
     })
-    project.addEventListener("click", () => {
-        unMoveCard(project)
-    })
-    project.addEventListener("touchend", () => {
+    project.addEventListener("touchstart", () => {
         unMoveCard(project)
     })
 })
